@@ -1,0 +1,108 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lightblue;
+    background: url(https://media.istockphoto.com/photos/background-empty-room-of-dark-wall-with-light-spot-picture-id545578602?k=6&m=545578602&s=170667a&w=0&h=1FpOatmoyoa_w4FvEOhQbzaKyCd4Xd1WFrzd0UVLGpg=) no-repeat center/cover  ;
+}
+/* Clock  */
+.clock {
+   
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(img/clock2.jpg);
+    background-size: cover;
+    border: 5px solid #05e2ff;
+    border-radius: 50%;
+    box-shadow: 0px 50px 9px rgb(18, 19, 19);
+    /* box-shadow: inset 0px 0px 92px  rgb(117, 245, 238); */
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background: rgba(44, 7, 255, 0.897);
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour, .clock .min, .clock .sec{
+    position: absolute;
+}
+
+/* clock hour */
+.clock .hour, .hr{
+    width: 150px;
+    height: 150px;
+}
+
+/* clock minute */
+.clock .min, .mn{
+    width: 205px;
+    height: 205px;
+}
+
+/* clock second */
+.clock .sec, .sc{
+    width: 225px;
+    height: 225px;
+}
+
+/* hour, minute and second */
+.hr, .mn, .sc{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background-color: #ff1010;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.mn::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    background-color: #ff0404;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+.sc::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background-color: #3a04fa;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+
+/* Made by */
+.para{
+    position: relative;
+    top: 70px;
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    text-align: center;
+}
+#p{
+    font-size: 12px;
+}
